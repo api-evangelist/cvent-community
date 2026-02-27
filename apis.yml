@@ -1,0 +1,61 @@
+name: Cvent Community API
+description: APIs for the Cvent Community platform, enabling event management, community engagement, and attendee experiences
+image: https://www.cvent.com/sites/all/themes/cvent/logo.png
+url: https://community.cvent.com
+created: '2024'
+modified: '2024'
+specificationVersion: '0.18'
+apis:
+- name: Cvent Community API
+  description: Provides access to community features including events, sessions, speakers, attendees, and engagement data
+  image: https://www.cvent.com/sites/all/themes/cvent/logo.png
+  humanURL: https://community.cvent.com
+  baseURL: https://api.cvent.com/community
+  tags:
+  - Events
+  - Community
+  - Attendees
+  - Sessions
+  - Networking
+  properties:
+  - type: Documentation
+    url: https://developer.cvent.com/documentation/community-api
+  - type: OpenAPI
+    url: https://api.cvent.com/community/openapi.json
+  - type: Authentication
+    url: https://developer.cvent.com/documentation/authentication
+  - type: Rate Limits
+    url: https://developer.cvent.com/documentation/rate-limits
+  - type: SDKs
+    url: https://developer.cvent.com/sdks
+  - type: Webhooks
+    url: https://developer.cvent.com/documentation/webhooks
+  - type: Support
+    url: https://support.cvent.com
+  - type: Change Log
+    url: https://developer.cvent.com/changelog
+  - type: Status
+    url: https://status.cvent.com
+  - type: Terms of Service
+    url: https://www.cvent.com/en/terms-of-service
+  - type: Privacy Policy
+    url: https://www.cvent.com/en/privacy-policy
+common:
+- type: Developer Portal
+  url: https://developer.cvent.com
+- type: Getting Started
+  url: https://developer.cvent.com/get-started
+- type: Blog
+  url: https://www.cvent.com/blog
+- type: Contact
+  url: https://www.cvent.com/contact
+maintainers:
+- FN: Cvent API Team
+  email: api-support@cvent.com
+  url: https://developer.cvent.com
+tags:
+- Events
+- Community
+- Event Management
+- SaaS
+- Attendee Management
