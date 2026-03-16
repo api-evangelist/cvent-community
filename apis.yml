@@ -2,8 +2,8 @@ name: Cvent Community API
 description: APIs for the Cvent Community platform, enabling event management, community engagement, and attendee experiences
 image: https://www.cvent.com/sites/all/themes/cvent/logo.png
 url: https://community.cvent.com
-created: '2024'
-modified: '2024'
+created: '2024-01-01'
+modified: '2026-03-16'
 specificationVersion: '0.18'
 apis:
 - name: Cvent Community API
@@ -50,9 +50,8 @@ common:
 - type: Contact
   url: https://www.cvent.com/contact
 maintainers:
-- FN: Cvent API Team
-  email: api-support@cvent.com
-  url: https://developer.cvent.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
 tags:
 - Events
 - Community
