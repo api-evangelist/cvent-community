@@ -1,52 +1,45 @@
-# Cvent Community API (cvent-community)
-APIs for the Cvent Community platform, enabling event management, community engagement, and attendee experiences
+# Cvent Community (cvent-community)
 
-**URL:** [Visit APIs.json URL](https://community.cvent.com)
+Cvent Community is Cvent's customer support, knowledge base, certification, and peer-to-peer forum hub at community.cvent.com. It is the 24/7 destination for event professionals to learn Cvent products, search the Knowledge Base, take Cvent Academy training and certifications, and exchange best practices with other users through Open Forum and product-specific Learning Centers (Attendee Hub, Registration, OnArrival, Surveys, Cvent Supplier Network, Event Diagramming, Cvent Studio, Cvent Webinar, Passkey). Cvent Community is not itself an API product — programmatic access to Cvent data is delivered through the Cvent Platform REST API at `api-platform.cvent.com` using OAuth 2.0 client credentials.
 
-## Tags:
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cvent-community/refs/heads/main/apis.yml)
 
- - Events, Community, Event Management, SaaS, Attendee Management
+## Scope
+
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
+- **x-type:** company
+
+## Tags
+
+- Certification, Community, Customer Support, Cvent Academy, Education, Forums, Knowledge Base, Learning Centers, SaaS, Training
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Cvent Community API
-Provides access to community features including events, sessions, speakers, attendees, and engagement data
+Cvent Community itself does not expose a developer API. Programmatic integration with Cvent products is provided via the Cvent Platform REST API (see the cvent-platform and cvent-event-cloud profiles).
 
-**Human URL:** [https://community.cvent.com](https://community.cvent.com)
+## Community Resources
 
+- [Cvent Community Home](https://community.cvent.com/home)
+- [Education](https://community.cvent.com/education)
+- [Learning Centers](https://community.cvent.com/education/learning-centers)
+- [Product Learning Centers](https://community.cvent.com/education/learning-centers/product)
+- [Training](https://community.cvent.com/training)
 
-#### Tags:
+## Developer Resources
 
- - Events, Community, Attendees, Sessions, Networking
-
-#### Properties
-
-- [Documentation](https://developer.cvent.com/documentation/community-api)
-- [OpenAPI](https://api.cvent.com/community/openapi.json)
-- [Authentication](https://developer.cvent.com/documentation/authentication)
-- [Rate Limits](https://developer.cvent.com/documentation/rate-limits)
-- [SDKs](https://developer.cvent.com/sdks)
-- [Webhooks](https://developer.cvent.com/documentation/webhooks)
-- [Support](https://support.cvent.com)
-- [Change Log](https://developer.cvent.com/changelog)
-- [Status](https://status.cvent.com)
-- [Terms of Service](https://www.cvent.com/en/terms-of-service)
-- [Privacy Policy](https://www.cvent.com/en/privacy-policy)
-
-## Common Properties
-
-- [Developer Portal](https://developer.cvent.com)
-- [Getting Started](https://developer.cvent.com/get-started)
-- [Blog](https://www.cvent.com/blog)
-- [Contact](https://www.cvent.com/contact)
+- [Developer Portal](https://developers.cvent.com/)
+- [Cvent Platform REST API](https://developers.cvent.com/docs/rest-api/overview)
+- [Support](https://support.cvent.com/)
+- [Status](https://status.cvent.com/)
 
 ## Maintainers
 
-**FN:** Cvent API Team
-
-**Email:** api-support@cvent.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
