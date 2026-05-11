@@ -57,6 +57,11 @@ common:
     url: https://www.cvent.com/en/privacy-policy
   - type: Blog
     url: https://www.cvent.com/blog
+  - type: Integrations
+    url: https://community.cvent.com/education/learning-centers/product/integrations
+integrations:
+  - name: Global Message
+  - name: Cvent Community
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
