@@ -1,6 +1,6 @@
 aid: cvent-community
 name: Cvent Community
-x-type: company
+kind: company
 description: >-
   Cvent Community is Cvent's customer support, knowledge base,
   certification, and peer-to-peer forum hub at community.cvent.com. It
@@ -49,7 +49,7 @@ common:
     url: https://support.cvent.com/
   - type: DeveloperPortal
     url: https://developers.cvent.com/
-  - type: Status
+  - type: StatusPage
     url: https://status.cvent.com/
   - type: TermsOfService
     url: https://www.cvent.com/en/terms-of-service
