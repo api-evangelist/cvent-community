@@ -35,6 +35,8 @@ tags:
   - Training
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/cvent
   - type: Community
     url: https://community.cvent.com/home
   - type: Education
