@@ -61,7 +61,7 @@ common:
     url: https://www.cvent.com/blog
   - type: Integrations
     url: https://community.cvent.com/education/learning-centers/product/integrations
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://www.cvent.com/llms.txt
 integrations:
   - name: Global Message
