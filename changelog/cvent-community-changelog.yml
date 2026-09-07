@@ -1,0 +1,190 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://release.cvent.com/eventmanagement (HTTP 200, fetched 2026-09-07) and
+  https://release.cvent.com/supplierandvenuesolutions/ (HTTP 200, fetched 2026-09-07), both linked
+  from the Cvent Community "Product News" hub at https://community.cvent.com/productnews (HTTP 200).
+url: https://release.cvent.com/eventmanagement
+platform: LaunchNotes
+platform_project_id: pro_fgAgDrySOHqPl
+feeds:
+  rss: null
+  atom: null
+  note: >-
+    No RSS or Atom feed is exposed. /eventmanagement/rss, /eventmanagement/feed and
+    /eventmanagement/atom.xml all return 404. The archive is browsable by month back to January 2023
+    via ?date=YYYY-MM-01 query parameters, which is the only machine-walkable index published.
+scheme:
+  type: launch-window
+  note: >-
+    Cvent does not version the platform. Releases are grouped into dated launch windows (e.g. the
+    "September 16, 2026" window) and announced ahead of the window across product families. Individual
+    packaged apps do carry semantic versions — the Cvent Salesforce App is at v8.10.
+current_version: null
+tracks:
+  - name: Event Marketing & Management Product News
+    url: https://release.cvent.com/eventmanagement
+    roadmap: https://release.cvent.com/eventmanagement/board
+    audience: Planners and marketers
+    products:
+      - Access Portal
+      - Attendee Hub
+      - Cvent Essentials
+      - Event Diagramming
+      - iCapture
+      - OnArrival
+      - Passkey
+      - Registration
+      - Reporting
+      - Supplier Network
+      - Vendor Marketplace powered by Reposite
+      - Webinar
+  - name: Supplier & Venue Solutions Product News
+    url: https://release.cvent.com/supplierandvenuesolutions/
+    audience: Hotels, venues and suppliers
+    products:
+      - Cvent Passkey
+      - Cvent Event Diagramming
+      - CSN Business Intelligence
+      - Group Pipeline Intelligence
+      - Hotel Website Solutions (White Label)
+      - Cvent Vendor Marketplace powered by Reposite
+entries:
+  - title: Cvent Salesforce App v8.10
+    version: '8.10'
+    published: '2026-09-03'
+    track: Event Marketing & Management
+    categories: [Salesforce App]
+    breaking: false
+    additions: false
+    highlights:
+      - >-
+        Bug fix — resolved an issue where the Sent Invitation workflow was not triggering for Lead and
+        Referral records.
+    url: https://release.cvent.com/eventmanagement/announcements/cvent-salesforce-app-v8-10
+  - title: Product Updates Releasing September 16, 2026
+    version: null
+    published: '2026-09-02'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Product News Digest]
+    breaking: false
+    additions: true
+    highlights:
+      - Digest covering the full September 16, 2026 launch window across every product family.
+    url: https://release.cvent.com/eventmanagement/announcements/product-updates-releasing-september-16-2026
+  - title: Plan & Promote Releases for September 16, 2026
+    version: null
+    published: '2026-09-01'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Plan & Promote, Registration]
+    breaking: false
+    additions: true
+    highlights:
+      - >-
+        Covers Registration, Abstract Management, Speaker Resource Center, Exhibitor Management and
+        Payments.
+    url: https://release.cvent.com/eventmanagement/announcements/plan-promote-releases-for-september-16-2026
+  - title: Actionable Insights Releases for September 16, 2026
+    version: null
+    published: '2026-09-01'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Actionable Insights, Reporting]
+    breaking: false
+    additions: true
+    highlights:
+      - >-
+        Covers Surveys, Reporting, Integrations, Engagement Scoring and App Marketplace; includes
+        abandoned-registration data in Reporting.
+    url: https://release.cvent.com/eventmanagement/announcements/actionable-insights-releases-for-september-16-2026
+  - title: Attendee Engagement Releases for September 16, 2026
+    version: null
+    published: '2026-09-01'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Attendee Engagement, Attendee Hub, Cvent Essentials, OnArrival, Webinar]
+    breaking: false
+    additions: true
+    highlights:
+      - Covers Attendee Hub, Events+, Appointments, OnArrival, LeadCapture, Webinar and Essentials.
+    url: https://release.cvent.com/eventmanagement/announcements/attendee-engagement-releases-for-september-16-2026
+  - title: Trade Show Solutions Releases for September 16, 2026
+    version: null
+    published: '2026-09-01'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Trade Show Solutions, iCapture]
+    breaking: false
+    additions: true
+    highlights:
+      - >-
+        Covers iCapture and Jifflenow; Jifflenow launch dates differ slightly from the Cvent window.
+    url: https://release.cvent.com/eventmanagement/announcements/trade-show-solutions-releases-for-september-16-2026
+  - title: Exchange Solutions Releases for September 16, 2026
+    version: null
+    published: '2026-09-01'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Exchange Solutions, Event Diagramming, Passkey, Supplier Network]
+    breaking: false
+    additions: true
+    highlights:
+      - >-
+        Covers Cvent Supplier Network, Event Diagramming, Passkey, Travel, Instant Book and Vendor
+        Marketplace powered by Reposite.
+    url: https://release.cvent.com/eventmanagement/announcements/exchange-solutions-releases-for-september-16-2026
+  - title: Spend & Workflow Releases for September 16, 2026
+    version: null
+    published: '2026-09-01'
+    release_window: '2026-09-16'
+    track: Event Marketing & Management
+    categories: [Spend & Workflow, Access Portal]
+    breaking: false
+    additions: false
+    highlights:
+      - No changes in this launch window for Spend & Workflow.
+    url: https://release.cvent.com/eventmanagement/announcements/spend-workflow-releases-for-september-16-2026
+  - title: 'SPOTLIGHT: Add Train to the Trip — Manage Every Journey in One Place'
+    version: null
+    published: '2026-09-01'
+    track: Event Marketing & Management
+    categories: [Spotlight, Registration]
+    breaking: false
+    additions: true
+    url: https://release.cvent.com/eventmanagement/announcements/spotlight-add-train-to-the-trip-manage-every-journey-in-one-place
+  - title: Attract Group Business Releases for September 2, 2026
+    version: null
+    published: '2026-09-02'
+    release_window: '2026-09-02'
+    track: Supplier & Venue Solutions
+    categories: [Attract Group Business, Cvent Vendor Marketplace Powered by Reposite]
+    breaking: false
+    additions: true
+    url: https://release.cvent.com/supplierandvenuesolutions/announcements/attract-group-business-releases-for-september-2-2026
+  - title: Improve Group Business Releases for September 2, 2026
+    version: null
+    published: '2026-09-02'
+    release_window: '2026-09-02'
+    track: Supplier & Venue Solutions
+    categories: [Improve Group Business, CSN Business Intelligence]
+    breaking: false
+    additions: true
+    url: https://release.cvent.com/supplierandvenuesolutions/announcements/improve-group-business-releases-for-september-2-2026
+  - title: Manage Group Business Releases for September 16, 2026
+    version: null
+    published: '2026-09-02'
+    release_window: '2026-09-16'
+    track: Supplier & Venue Solutions
+    categories: [Manage Group Business, Cvent Event Diagramming, Cvent Passkey]
+    breaking: false
+    additions: true
+    url: https://release.cvent.com/supplierandvenuesolutions/announcements/manage-group-business-releases-for-september-16-2026-1
+window_note: >-
+  Recent window only, harvested 2026-09-07. The live LaunchNotes site is the source of truth; the
+  archive reaches back to January 2023.
+api_changelog_note: >-
+  This is the PRODUCT changelog reached from the Cvent Community. The Cvent REST API changelog is a
+  separate document at https://developers.cvent.com/docs/rest-api/changelog and belongs to the parent
+  record at all/cvent/.

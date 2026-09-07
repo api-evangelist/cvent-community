@@ -1,0 +1,58 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  https://community.cvent.com/.well-known/oauth-protected-resource (HTTP 404, application/json,
+  probed 2026-09-07) and https://community.cvent.com/.well-known/oauth-authorization-server
+  (HTTP 404, application/json, probed 2026-09-07)
+status: not-enabled
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: probed
+server: null
+tools: []
+finding:
+  summary: >-
+    Cvent Community runs on Higher Logic Thrive, and the Higher Logic platform ships an MCP server
+    capability that is NOT enabled for Cvent's tenant. Both RFC 8414 and RFC 9728 discovery paths on
+    community.cvent.com are handled by a real JSON MCP router rather than the site's HTML catch-all,
+    and both answer with an explicit tenant-level refusal.
+  evidence:
+    - url: https://community.cvent.com/.well-known/oauth-protected-resource
+      http_status: 404
+      content_type: application/json
+      body: >-
+        {"error":"invalid_request","error_description":"The MCP server is not enabled for tenant CVENT.
+        An administrator must register its Identity Server clients before it can be used."}
+    - url: https://community.cvent.com/.well-known/oauth-authorization-server
+      http_status: 404
+      content_type: application/json
+      body: >-
+        {"error":"invalid_request","error_description":"The MCP server is not enabled for tenant CVENT.
+        An administrator must register its Identity Server clients before it can be used."}
+  probes_that_missed:
+    - url: https://community.cvent.com/mcp
+      method: POST tools/list
+      http_status: 200
+      note: HTML catch-all shell, not a JSON-RPC endpoint.
+    - url: https://community.cvent.com/api/mcp
+      method: POST tools/list
+      http_status: 200
+      note: HTML catch-all shell.
+    - url: https://community.cvent.com/mcp/sse
+      method: POST tools/list
+      http_status: 200
+      note: HTML catch-all shell.
+  interpretation: >-
+    This is a disabled platform capability, not a shipped agent surface. No MCPServer pointer is
+    emitted: nothing an MCP client can call exists today. The remedy is Cvent's — a Higher Logic
+    administrator registers the Identity Server clients and the community's knowledge base, forums and
+    learning centers become reachable to agents. Recording the refusal is what makes that movement
+    visible on the next sweep.
+notes:
+  - >-
+    The scoped Cvent MCP question is separate: the callable Cvent Platform REST API and any MCP
+    surface over it belong to the parent record at all/cvent/, not to this community/support record.

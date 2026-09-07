@@ -1,0 +1,96 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  https://support.cvent.com/.well-known/openid-configuration (HTTP 200, fetched 2026-09-07);
+  https://community.cvent.com/.well-known/oauth-protected-resource (HTTP 404, application/json);
+  https://community.cvent.com/home (HTTP 200); https://trust.cvent.com/ (HTTP 200)
+conformance:
+  - id: oidc-discovery
+    conforms: true
+    evidence: >-
+      https://support.cvent.com/.well-known/openid-configuration returns HTTP 200 application/json with
+      issuer, authorization_endpoint, token_endpoint, userinfo_endpoint, jwks_uri and
+      registration_endpoint — a complete OpenID Connect Discovery 1.0 document. Saved verbatim to
+      well-known/cvent-community-openid-configuration.json.
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      grant_types_supported [authorization_code, refresh_token]; token endpoint auth methods
+      client_secret_post, client_secret_basic and private_key_jwt (RFC 7523).
+  - id: rfc7636-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported ["S256"] in the support.cvent.com discovery document.
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint https://support.cvent.com/services/oauth2/register is advertised.
+  - id: rfc7662-token-introspection
+    conforms: true
+    evidence: introspection_endpoint https://support.cvent.com/services/oauth2/introspect is advertised.
+  - id: rfc9449-dpop
+    conforms: true
+    evidence: >-
+      dpop_signing_alg_values_supported [RS256, RS384, RS512, ES256, ES384, ES512, EdDSA] in the
+      support.cvent.com discovery document.
+  - id: oidc-frontchannel-logout
+    conforms: true
+    evidence: frontchannel_logout_supported true; end_session_endpoint /services/auth/idp/oidc/logout.
+  - id: saml2
+    conforms: true
+    evidence: >-
+      community.cvent.com is a Higher Logic SAML service provider — the login link in the served page
+      markup is /HigherLogic/Security/SAML/localSAMLLoginService.aspx?binding=HttpRedirect. No SAML
+      metadata document is published at a discoverable path.
+  - id: rfc8414-oauth-authorization-server-metadata
+    conforms: false
+    evidence: >-
+      support.cvent.com returns 401 for /.well-known/oauth-authorization-server; community.cvent.com
+      returns a JSON 404 from the Higher Logic MCP router; every other host 404s. Only the OIDC
+      discovery path is served.
+  - id: rfc9728-oauth-protected-resource-metadata
+    conforms: false
+    evidence: >-
+      No host serves /.well-known/oauth-protected-resource. community.cvent.com's 404 body states the
+      Higher Logic MCP server is not enabled for tenant CVENT.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: >-
+      No /.well-known/security.txt on community.cvent.com, support.cvent.com, release.cvent.com,
+      status.cvent.com, www.cvent.com or cvent.com. Cvent runs a disclosure program at a human URL but
+      publishes no machine-readable RFC 9116 file.
+  - id: mcp
+    conforms: false
+    evidence: >-
+      The Higher Logic Thrive MCP server capability is present on the platform but explicitly disabled
+      for Cvent's tenant. See mcp/cvent-community-mcp.yml.
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, WSDL or .proto is published for the Cvent Community
+      surface. /openapi.json and /swagger.json return real 404s on community.cvent.com; every other
+      probed contract path returns the Higher Logic HTML catch-all.
+  - id: llmstxt
+    conforms: true
+    evidence: >-
+      https://www.cvent.com/llms.txt returns HTTP 200 text/plain (51 KB) and is harvested verbatim to
+      llms/cvent-community-llms.txt.
+compliance:
+  published: true
+  url: https://trust.cvent.com/
+  certifications:
+    - SOC 2
+    - ISO 27001
+    - ISO 27017
+    - ISO 27018
+    - PCI DSS
+    - HIPAA
+    - FedRAMP
+    - GDPR
+  evidence: >-
+    https://trust.cvent.com/ (HTTP 200, fetched 2026-09-07) — a Conveyor-hosted trust center naming
+    each certification. Captured in security/cvent-community-trust-center.yml.
+domain_standard:
+  applicable: false
+  note: >-
+    Community/knowledge-base platforms have no domain interchange standard in scoring.yml's
+    standards[] list for this sector, and Cvent publishes no contract here that could declare one.
+    Recorded as not applicable rather than invented.

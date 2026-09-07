@@ -1,0 +1,317 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  Live GET probes of the named /.well-known/ path list (plus /apis.json, /apis.yml and /llms.txt)
+  against every host this record knows: community.cvent.com (the Cvent Community itself),
+  support.cvent.com (Knowledge Base / case management), release.cvent.com (Product News),
+  status.cvent.com (Product Status), and the cvent.com / www.cvent.com registrable domain.
+summary:
+  hosts_probed: 6
+  documents_served: 2
+  hit_count: 2
+  note: >-
+    Two real documents are served across the Cvent Community estate. (1) support.cvent.com serves a
+    valid OpenID Connect discovery document at /.well-known/openid-configuration — issuer
+    https://support.cvent.com, jwks_uri https://support.cvent.com/id/keys, Salesforce Experience Cloud
+    endpoints under /services/oauth2/. This is a genuine RFC 8414/OIDC-Discovery document on a host
+    Cvent controls; it is the identity surface behind the Knowledge Base and case portal, not an API
+    contract. (2) www.cvent.com and cvent.com serve /llms.txt (harvested to llms/cvent-community-llms.txt).
+    No security.txt, api-catalog, ai-plugin.json, aauth-resource.json, agent-card.json, agent.json or
+    apis.json is served anywhere. community.cvent.com and status.cvent.com are catch-all hosts (see
+    soft_404_control below) — every extensionless 200 there is an HTML shell, not a document, and is
+    recorded as a miss.
+path_echo_control:
+  status: passed
+  note: >-
+    A negative-control request to /.well-known/cvent-community-negative-control-7f3ab91c.json — a path
+    that cannot exist — was issued on every host. It returned 404 on community.cvent.com,
+    www.cvent.com, cvent.com and release.cvent.com, and 401 on support.cvent.com (the same challenge
+    every other path there returns), so no host echoes the requested path back as a document. Only
+    status.cvent.com answered the control with 200; its hits are therefore discarded (see below).
+soft_404_control:
+  community.cvent.com:
+    result: catch-all
+    note: >-
+      Extensionless paths return HTTP 200 with a ~56.9 KB Higher Logic HTML shell titled
+      " - Cvent Community" (empty page title). Confirmed against /mcp, /sse, /api/v1, /graphql,
+      /api-docs, /roadmap and /signup, all of which return the same shell. Paths ending in .json
+      return a real 404. Every 200 on this host in documents[] below is therefore a miss with
+      file: null.
+    control_bytes: 56954
+  status.cvent.com:
+    result: catch-all
+    note: >-
+      A Next.js SPA that answers 200 with a ~3.9 KB HTML shell for every /.well-known/* path,
+      including the negative control. All /.well-known hits on this host are discarded.
+    control_bytes: 4034
+hosts:
+  - host: https://support.cvent.com
+    platform: Salesforce Experience Cloud
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: cvent-community-openid-configuration.json
+      - path: /.well-known/security.txt
+        status: 401
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 401
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 401
+        file: null
+      - path: /.well-known/api-catalog
+        status: 401
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 401
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 401
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 401
+        file: null
+      - path: /.well-known/agent.json
+        status: 401
+        file: null
+      - path: /.well-known/apis.json
+        status: 401
+        file: null
+      - path: /apis.json
+        status: 401
+        file: null
+      - path: /apis.yml
+        status: 401
+        file: null
+      - path: /llms.txt
+        status: 401
+        file: null
+  - host: https://community.cvent.com
+    platform: Higher Logic Thrive
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: HTML catch-all shell, not a document — see soft_404_control.
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: HTML catch-all shell, not a document.
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+        note: >-
+          Real JSON 404 from the Higher Logic MCP router — {"error":"invalid_request",
+          "error_description":"The MCP server is not enabled for tenant CVENT. An administrator must
+          register its Identity Server clients before it can be used."}. See mcp/cvent-community-mcp.yml.
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+        note: Same Higher Logic MCP router JSON 404 as above.
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: HTML catch-all shell, not a document.
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/apis.json
+        status: 404
+        file: null
+      - path: /apis.json
+        status: 404
+        file: null
+      - path: /apis.yml
+        status: 200
+        file: null
+        note: HTML catch-all shell, not an APIs.json index.
+      - path: /llms.txt
+        status: 200
+        file: null
+        note: HTML catch-all shell, not an llms.txt.
+  - host: https://www.cvent.com
+    documents:
+      - path: /llms.txt
+        status: 200
+        file: ../llms/cvent-community-llms.txt
+        note: >-
+          Real 51 KB text/plain llms.txt describing Cvent. Already harvested in this repo at
+          llms/cvent-community-llms.txt.
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/apis.json
+        status: 404
+        file: null
+      - path: /apis.json
+        status: 404
+        file: null
+      - path: /apis.yml
+        status: 403
+        file: null
+  - host: https://cvent.com
+    documents:
+      - path: /llms.txt
+        status: 200
+        file: ../llms/cvent-community-llms.txt
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/apis.json
+        status: 404
+        file: null
+      - path: /apis.json
+        status: 404
+        file: null
+      - path: /apis.yml
+        status: 403
+        file: null
+  - host: https://release.cvent.com
+    platform: LaunchNotes
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/apis.json
+        status: 404
+        file: null
+      - path: /apis.json
+        status: 404
+        file: null
+      - path: /apis.yml
+        status: 404
+        file: null
+      - path: /llms.txt
+        status: 404
+        file: null
+  - host: https://status.cvent.com
+    platform: Next.js SPA
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: SPA catch-all — discarded, negative control also returned 200.
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/aauth-resource.json
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /.well-known/apis.json
+        status: 200
+        file: null
+        note: SPA catch-all — discarded.
+      - path: /apis.json
+        status: 404
+        file: null
+      - path: /apis.yml
+        status: 404
+        file: null

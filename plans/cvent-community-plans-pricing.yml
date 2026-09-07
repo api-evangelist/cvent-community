@@ -1,0 +1,22 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://www.cvent.com/en/event-management-software/cvent-pricing (HTTP 200, fetched 2026-09-07);
+  https://community.cvent.com/home (HTTP 200); https://community.cvent.com/login (HTTP 200)
+plan_count: 0
+plans: []
+note: >-
+  Cvent Community publishes no plans, tiers or prices of its own. Access to community.cvent.com is
+  free to Cvent customers and gated behind a Higher Logic SAML sign-in tied to a Cvent account —
+  there is no standalone subscription, no metered quota and no self-serve purchase path for the
+  community, knowledge base, Cvent Academy or the learning centers. The platform pricing page it sits
+  under (cvent.com/en/event-management-software/cvent-pricing) publishes no numbers either: it is a
+  "Request a Quote" form. An honest zero, recorded rather than omitted.
+pricing_page: https://www.cvent.com/en/event-management-software/cvent-pricing
+pricing_model: quote-only
+free_tier:
+  available: true
+  note: >-
+    Community, Knowledge Base and Cvent Academy access is included at no additional cost with any
+    Cvent subscription. Some certification tracks are separately paid; Cvent publishes no price for
+    them on a public page.

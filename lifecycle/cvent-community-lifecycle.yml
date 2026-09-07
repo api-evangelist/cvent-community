@@ -1,0 +1,32 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://status.cvent.com/ (HTTP 200, fetched 2026-09-07); https://release.cvent.com/eventmanagement
+  (HTTP 200); https://release.cvent.com/eventmanagement/board (HTTP 200);
+  https://community.cvent.com/productnews (HTTP 200)
+versioning:
+  scheme: launch-window
+  current: null
+  docs: https://release.cvent.com/eventmanagement
+  note: >-
+    Cvent Community is a hosted community/support surface with no published API contract and therefore
+    no API version. The platform it documents ships on dated launch windows announced ahead of release.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No deprecation or sunset policy is published for the Cvent Community surface. Product retirements
+    are announced case-by-case in the Product News stream at release.cvent.com. No Deprecation pointer
+    is emitted, because no policy document exists to point at.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.cvent.com/
+status_page_note: >-
+  "Product Status" in the Cvent Community navigation links to status.cvent.com, a Next.js status site
+  segmented by region and product line (the root redirects to /NA/Event%20Marketing).
+roadmap: https://release.cvent.com/eventmanagement/board
+roadmap_note: >-
+  A public LaunchNotes roadmap board, reachable without login, listing in-flight items by product
+  family with a forward-looking-statements disclaimer and per-item Subscribe controls.
+deprecated_operations: []

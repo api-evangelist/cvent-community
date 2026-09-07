@@ -42,7 +42,7 @@ type: Index
 access: 3rd-Party
 position: Consuming
 created: '2024-01-01'
-modified: '2026-04-28'
+modified: '2026-09-07'
 specificationVersion: '0.23'
 tags:
   - Certification
@@ -68,6 +68,12 @@ tags_raw:
   - Training
 apis: []
 common:
+  - type: TrustCenter
+    url: security/cvent-community-trust-center.yml
+  - type: DomainSecurity
+    url: security/cvent-community-domain-security.yml
+  - type: Website
+    url: https://www.cvent.com/
   - type: GitHubOrganization
     url: https://github.com/cvent
   - type: Community
@@ -87,7 +93,7 @@ common:
   - type: StatusPage
     url: https://status.cvent.com/
   - type: TermsOfService
-    url: https://www.cvent.com/en/terms-of-service
+    url: https://community.cvent.com/termsofuse
   - type: PrivacyPolicy
     url: https://www.cvent.com/en/privacy-policy
   - type: Blog
@@ -96,9 +102,64 @@ common:
     url: https://community.cvent.com/education/learning-centers/product/integrations
   - type: LlmsText
     url: https://www.cvent.com/llms.txt
+  - type: Documentation
+    url: https://support.cvent.com/s/knowledgebase
+  - type: GettingStarted
+    url: https://community.cvent.com/participate/welcome-to-the-community
+  - type: Forum
+    url: https://community.cvent.com/forums/openforumhome?CommunityKey=693148f0-28e3-495e-a369-16642c2a4f4f
+  - type: Events
+    url: https://community.cvent.com/events/calendar
+  - type: X-UserGroups
+    url: https://community.cvent.com/user-groups
+  - type: Certification
+    url: https://www.cvent.com/en/cvent-certification
+  - type: Login
+    url: https://community.cvent.com/login
+  - type: Roadmap
+    url: https://release.cvent.com/eventmanagement/board
+  - type: ChangeLog
+    url: https://release.cvent.com/eventmanagement
+  - type: ChangeLog
+    url: changelog/cvent-community-changelog.yml
+  - type: Pricing
+    url: https://www.cvent.com/en/event-management-software/cvent-pricing
+  - type: LLMsTxt
+    url: llms/cvent-community-llms.txt
+  - type: WellKnown
+    url: well-known/cvent-community-well-known.yml
+  - type: OpenIDConnect
+    url: well-known/cvent-community-openid-configuration.json
+  - type: Authentication
+    url: authentication/cvent-community-authentication.yml
+  - type: OAuthScopes
+    url: scopes/cvent-community-scopes.yml
+  - type: Conformance
+    url: conformance/cvent-community-conformance.yml
+  - type: Compliance
+    url: https://trust.cvent.com/
+  - type: Security
+    url: https://www.cvent.com/en/event-management-software/vulnerability-disclosure-program
+  - type: VulnerabilityDisclosure
+    url: security/cvent-community-vulnerability-disclosure.yml
+  - type: Lifecycle
+    url: lifecycle/cvent-community-lifecycle.yml
+  - type: Plans
+    url: plans/cvent-community-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/cvent-community-rate-limits.yml
+  - type: X-MCPServerCandidate
+    url: mcp/cvent-community-mcp.yml
 integrations:
   - name: Global Message
   - name: Cvent Community
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-07'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v3
+x-parent: cvent
+x-relationship: product

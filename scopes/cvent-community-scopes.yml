@@ -1,0 +1,165 @@
+generated: '2026-09-07'
+method: probed
+source: https://support.cvent.com/.well-known/openid-configuration (HTTP 200, fetched 2026-09-07)
+docs: https://support.cvent.com/s/knowledgebase
+note: >-
+  These are the OAuth 2.0 / OIDC scopes advertised by the Cvent support + knowledge base portal at
+  support.cvent.com, read verbatim from its OpenID Connect discovery document. They are Salesforce
+  Experience Cloud's STANDARD scope vocabulary as exposed by Cvent's Salesforce org — not a scope
+  taxonomy Cvent authored for a Cvent Community API. Cvent Community publishes no API contract; this
+  file records the identity surface that actually answers, and nothing more. The scopes governing the
+  callable Cvent Platform REST API are a different set and live at all/cvent/scopes/cvent-scopes.yml.
+schemes:
+  - name: support-cvent-oidc
+    source: well-known/cvent-community-openid-configuration.json
+    issuer: https://support.cvent.com
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://support.cvent.com/services/oauth2/authorize
+        tokenUrl: https://support.cvent.com/services/oauth2/token
+scope_count: 36
+scopes:
+  - scope: address
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_calculated_insight_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_identityresolution_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_ingest_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_profile_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_query_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: cdp_segment_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: chatbot_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: chatter_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: content
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: custom_permissions
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: data_cloud_user_claims
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: eclair_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: einstein_gpt_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: email
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: forgot_password
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: full
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: id
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: interaction_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: lightning
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: mcp_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: offline_access
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: openid
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: pardot_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: phone
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: profile
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: pwdless_login_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: refresh_token
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: scrt_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: sfap_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: user_registration_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: visualforce
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: wave_api
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]
+  - scope: web
+    description: null
+    flows: [authorizationCode]
+    sources: [well-known/cvent-community-openid-configuration.json]

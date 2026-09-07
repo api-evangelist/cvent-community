@@ -1,0 +1,14 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://community.cvent.com/home (HTTP 200, fetched 2026-09-07);
+  https://support.cvent.com/s/knowledgebase (HTTP 200); well-known/cvent-community-well-known.yml
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No rate limits are published, and none can be observed: Cvent Community exposes no callable API, so
+  there is no request budget to document. No X-RateLimit-*, RateLimit-* or Retry-After header appeared
+  on any of the 77 anonymous probes recorded in well-known/cvent-community-well-known.yml. The
+  documented limits for the callable Cvent Platform REST API are a different surface and live at
+  all/cvent/rate-limits/cvent-rate-limits.yml. An honest zero.
