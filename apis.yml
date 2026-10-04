@@ -47,7 +47,7 @@ specificationVersion: '0.23'
 tags:
   - Certification
   - Community
-  - Customer-Support
+  - Customer Support
   - Cvent Academy
   - Education
   - Forums
@@ -66,6 +66,7 @@ tags_raw:
   - Learning Centers
   - SaaS
   - Training
+  - Customer-Support
 apis: []
 common:
   - type: TrustCenter
