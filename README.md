@@ -1,4 +1,4 @@
-# Cvent Community (cvent-community)
+# Cvent Community
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,46 +64,118 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cvent Community is Cvent's customer support, knowledge base, certification, and peer-to-peer forum hub at community.cvent.com. It is the 24/7 destination for event professionals to learn Cvent products, search the Knowledge Base, take Cvent Academy training and certifications, and exchange best practices with other users through Open Forum and product-specific Learning Centers (Attendee Hub, Registration, OnArrival, Surveys, Cvent Supplier Network, Event Diagramming, Cvent Studio, Cvent Webinar, Passkey). Cvent Community is not itself an API product — programmatic access to Cvent data is delivered through the Cvent Platform REST API at `api-platform.cvent.com` using OAuth 2.0 client credentials.
+Cvent Community is Cvent's customer support, knowledge base, certification, and peer-to-peer forum hub at community.cvent.com. It is the 24/7 destination where event professionals learn Cvent products, search the Knowledge Base, take Cvent Academy training and certification courses, and exchange best practices with other users through Open Forum and product-specific learning centers (Attendee Hub, Registration, OnArrival, Surveys, Cvent Supplier Network, Event Diagramming, Cvent Studio, Cvent Webinar, Passkey). Cvent Community is not itself an API product; programmatic access to Cvent data is delivered via the Cvent Platform REST API at api-platform.cvent.com using OAuth 2.0 client credentials.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cvent-community/refs/heads/main/apis.yml)
+**Areas:** Certification · Community · Customer Service · Cvent Academy · Education · Forums · Knowledge Base · Learning Centers · Software-as-a-Service · Training
 
-## Scope
+## Cvent Community on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
-- **x-type:** company
+Everything profiled for Cvent Community is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cvent-community/](https://apis.io/providers/cvent-community/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Certification, Community, Customer Support, Cvent Academy, Education, Forums, Knowledge Base, Learning Centers, SaaS, Training
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### MCP servers (1)
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-04-28
+Model Context Protocol servers that expose the API to agents.
 
-## APIs
+- [cvent-community-mcp.yml](https://apis.io/servers/cvent-community/cvent-community-mcp-yml/)
 
-Cvent Community itself does not expose a developer API. Programmatic integration with Cvent products is provided via the Cvent Platform REST API (see the cvent-platform and cvent-event-cloud profiles).
+#### Security (4)
 
-## Community Resources
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Cvent Community Home](https://community.cvent.com/home)
-- [Education](https://community.cvent.com/education)
-- [Learning Centers](https://community.cvent.com/education/learning-centers)
-- [Product Learning Centers](https://community.cvent.com/education/learning-centers/product)
-- [Training](https://community.cvent.com/training)
+- [Cvent Community Authentication](https://apis.io/security/cvent-community/cvent-community-authentication/)
+- [Cvent Community Domain Security](https://apis.io/security/cvent-community/cvent-community-domain-security/)
+- [Cvent Community Trust Center](https://apis.io/security/cvent-community/cvent-community-trust-center/)
+- [Cvent Community Vulnerability Disclosure](https://apis.io/security/cvent-community/cvent-community-vulnerability-disclosure/)
 
-## Developer Resources
+#### OAuth scopes (1)
 
-- [Developer Portal](https://developers.cvent.com/)
-- [Cvent Platform REST API](https://developers.cvent.com/docs/rest-api/overview)
+The permissions the API asks for.
+
+- [Cvent Community Scopes](https://apis.io/scopes/cvent-community/cvent-community-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Cvent Community Plans Pricing](https://apis.io/plans/cvent-community/cvent-community-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Cvent Community Rate Limits](https://apis.io/rate-limits/cvent-community/cvent-community-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.cvent.com/)
+- [Documentation](https://support.cvent.com/s/knowledgebase)
+- [Getting started](https://community.cvent.com/participate/welcome-to-the-community)
+- [Pricing](https://www.cvent.com/en/event-management-software/cvent-pricing)
 - [Support](https://support.cvent.com/)
+- [Changelog](https://release.cvent.com/eventmanagement)
+- [Blog](https://www.cvent.com/blog)
+- [Security](https://www.cvent.com/en/event-management-software/vulnerability-disclosure-program)
+- [Compliance](https://trust.cvent.com/)
+- [Terms of service](https://community.cvent.com/termsofuse)
+- [Privacy policy](https://www.cvent.com/en/privacy-policy)
+- [GitHub](https://github.com/cvent)
 - [Status](https://status.cvent.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 36.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 46.1 |
+
+**Agent readiness 17.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 40.2** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cvent-community/](https://apis.io/providers/cvent-community/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cvent Community: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cvent-community/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
